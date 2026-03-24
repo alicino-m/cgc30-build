@@ -72,7 +72,7 @@ export function HomePage() {
               <Button size="lg" className="rounded-full gap-2 px-10 h-14 text-lg font-bold shadow-lg shadow-primary/20" asChild>
                 <Link to="/sobre">Nossa História <ChevronRight className="h-5 w-5" /></Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg font-bold bg-white/5 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-primary transition-all" asChild>
+              <Button size="lg" variant="outline" className="rounded-full px-10 h-14 text-lg font-bold bg-white/5 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-slate-900 transition-all" asChild>
                 <Link to="/calendario">Ver Agenda</Link>
               </Button>
             </motion.div>

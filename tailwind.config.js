@@ -23,7 +23,11 @@ export default {
   				'Fira Code',
   				'Consolas',
   				'monospace'
-  			]
+  			],
+        playfair: [
+          'Playfair Display',
+          'serif'
+        ]
   		},
   		fontSize: {
   			'2xs': [

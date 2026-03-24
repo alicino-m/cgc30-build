@@ -33,7 +33,7 @@ export function ArtigosPage() {
               </CardContent>
               <CardFooter>
                 <Button variant="ghost" className="p-0 text-primary hover:text-primary/80 font-bold flex gap-2" asChild>
-                  <a href={article.url}>Ler artigo completo <ExternalLink className="h-4 w-4" /></a>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">Ler artigo completo <ExternalLink className="h-4 w-4" /></a>
                 </Button>
               </CardFooter>
             </Card>

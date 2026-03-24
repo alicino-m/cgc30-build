@@ -12,9 +12,9 @@ const FEATURES = [
 ];
 export function HomePage() {
   return (
-    <div>
+    <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background py-20 md:py-32">
+      <section className="relative overflow-hidden bg-background py-16 md:py-24 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto space-y-8">
@@ -31,18 +31,18 @@ export function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
-              className="text-display font-playfair font-bold text-foreground"
+              className="font-playfair font-bold text-4xl sm:text-5xl md:text-7xl text-foreground leading-tight"
             >
               Formando os Líderes <br />
-              <span className="text-secondary text-4xl md:text-6xl italic">do Amanhã</span>
+              <span className="text-secondary italic">do Amanhã</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-body text-xl max-w-2xl mx-auto"
+              className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             >
-              A Ordem DeMolay prepara jovens de 12 a 21 anos para um futuro de liderança, 
+              A Ordem DeMolay prepara jovens de 12 a 21 anos para um futuro de liderança,
               responsabilidade cidadã e amizade fraternal através de virtudes sólidas.
             </motion.p>
             <motion.div
@@ -62,7 +62,7 @@ export function HomePage() {
         </div>
       </section>
       {/* Highlights Grid */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-12 md:py-20 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FEATURES.map((item, idx) => (
@@ -79,7 +79,7 @@ export function HomePage() {
                       {React.createElement(item.icon, { className: "h-8 w-8" })}
                     </div>
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </Link>
               </motion.div>
@@ -88,17 +88,19 @@ export function HomePage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary rounded-3xl p-8 md:p-16 text-primary-foreground text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent pointer-events-none" />
-          <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-5xl font-playfair font-bold">Faça Parte da Nossa Fraternidade</h2>
-            <p className="text-primary-foreground/80 text-lg">
-              Descubra como a Ordem DeMolay pode transformar a sua vida e a sua comunidade.
-            </p>
-            <Button size="lg" variant="secondary" className="rounded-full px-10 font-bold" asChild>
-              <Link to="/calendario">Conheça Nossas Reuniões</Link>
-            </Button>
+      <section className="py-12 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-primary rounded-3xl p-8 md:p-16 text-primary-foreground text-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent pointer-events-none" />
+            <div className="relative z-10 max-w-2xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-5xl font-playfair font-bold">Faça Parte da Nossa Fraternidade</h2>
+              <p className="text-primary-foreground/80 text-lg">
+                Descubra como a Ordem DeMolay pode transformar a sua vida e a sua comunidade.
+              </p>
+              <Button size="lg" variant="secondary" className="rounded-full px-10 font-bold" asChild>
+                <Link to="/calendario">Conheça Nossas Reuniões</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

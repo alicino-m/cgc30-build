@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Landmark, Image as ImageIcon, Download, BookOpen, Calendar, Info } from 'lucide-react';
+import { cn } from '@/lib/utils';
 const FEATURES = [
   { icon: ImageIcon, title: 'Galeria', desc: 'Explore registros visuais da nossa trajetória.', link: '/galeria', color: 'bg-blue-500/10 text-blue-600' },
   { icon: Download, title: 'Downloads', desc: 'Acesse documentos e materiais oficiais.', link: '/downloads', color: 'bg-amber-500/10 text-amber-600' },
@@ -75,7 +76,7 @@ export function HomePage() {
                 <Link to={item.link}>
                   <div className="bg-card p-8 rounded-2xl border hover:shadow-xl transition-all hover:-translate-y-1 h-full flex flex-col items-center text-center">
                     <div className={cn("p-4 rounded-xl mb-6 transition-transform group-hover:scale-110", item.color)}>
-                      <item.icon className="h-8 w-8" />
+                      {React.createElement(item.icon, { className: "h-8 w-8" })}
                     </div>
                     <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground text-sm">{item.desc}</p>
